@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Клент информация</title>
+    <link rel="stylesheet" href="/css/zakaz-userInformatsia/userInformat.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font aweson  css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="user_info">
+                    <div class="user_img">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                            alt="">
+                    </div>
+                    <div class="user_pages">
+                        <ul>
+                            <li><a href="#">Бонус</a></li>
+                            <li><a href="/zakaz-userInformatsia/userInfo.html">Данные</a></li>
+                            <li><a href="/zakaz-userInformatsia/buyurtmalar.html">Заказы</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-8">
+                <div class="user_form">
+                    <table class="table" border="1">
+                        <tbody>
+                            <tr>
+                                <td colspan ="7"><h4>Заказ №<span>0011</span></h4></td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" colspan="4"><h5>#0011</h5> </td>
+                                <td colspan="5"></td>
+                            </tr>
+                            <tr>
+                                <td>Наименование</td>
+                                <td> имя</td>
+                                <td>Номер телефона</td>
+                                <td colspan="1">
+                                    <a href="#">93 721 41 29 </a>
+                                </td>
+                                <td>Эл. адрес</td>
+                                <td colspan="3">aaa@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Выберите страну</td>
+                                <td>
+                                    адрес
+                                </td>
+                                <td> Индекс* </td>
+                                <td colspan="1">
+                                    ____
+                                </td>
+                                <td>Название улицы, дома и т.д.</td>
+                                <td colspan="3">адрес</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Наименование Товара</td>
+                                <td>  </td>
+                                <td> _ _ </td>
+                                <td colspan="6"> _ _</td>
+                            </tr>
+                            <tr>
+                                <td>Количество</td>
+                                <td> ВЫсота </td>
+                                <td> _ _ </td>
+                                <td >Ширина</td>
+                                <td> _ _ </td>
+                                <td>Длина</td>
+                                <td>_ _</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Условия поставки</td>
+                                <td colspan="2">_ _</td>
+                            </tr>
+                            <tr>
+                                <td>Перенаправить</td>
+                            </tr>
+                        </tbody>
+                    </table>
+    
+
+                </div>
+                <div class="logist_yuborish">
+                    <div class="logist_list">
+                        <span class="Перенаправить">Перенаправить <i class="fa-solid fa-angle-down"></i></span>
+                        <ul class="list" style="display: none;">
+                            <li>логист</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button>На Подтверждение</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            document.querySelector('.Перенаправить').addEventListener('click', ()=>{
+                let list = document.querySelector('.list')
+                if(list.style.display === 'none'){
+                    list.style.display = 'block'
+                }
+                else{
+                    list.style.display = 'none'
+                }
+            })
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/message.css">
+    <script src="./js/index.js"></script>
+    <!--  bootstrap   -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="header_bar">
+    
+        <div class="menu-bar">
+          <button class="logo" onclick="openNav()">☰</button>
+          <div class="unv_filter">
+            <ul>
+              <li class="sort_btn">
+                <div class="sort_div">
+                  <span class="sort_список">список <i class="fas fa-caret-down"></i></span>
+                </div>
+    
+                <div class="dropdown-menu">
+                  <ul>
+                    <!-- <li><a href="#">Все заявки</a>
+                    </li>
+                    <li><a href="#">Мои заявки</a>
+                    </li>
+                    <li><a href="#">Заказы</a>
+                    </li> -->
+    
+                    <li>
+                      <!-- <a href="#"></a> -->
+                      <span>Заявки <i class="fas fa-caret-right"></i></span>
+                      <div class="dropdown-menu-1">
+                        <ul>
+                          <li>
+                            <input type="radio" id="hammasi" name="radio" value="Все">
+                            <label for="hammasi">Все заявки</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="hammasi" name="radio" value="Все">
+                            <label for="hammasi">Мои заявки</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="qaytaIshlash" name="radio" value="обработке">
+                            <label for="qaytaIshlash">В обработке</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="tasdiqlangan" name="radio" value="подтвержденные">
+                            <label for="tasdiqlangan">подтвержденные</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="radetilgan" name="radio" value="отмененные">
+                            <label for="radetilgan">отмененные</label><br>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <span>Заказы <i class="fas fa-caret-right"></i></span>
+                      <div class="dropdown-menu-1">
+                        <ul>
+                          <li>
+                            <input type="radio" id="hammasi1" name="radio2" value="Все">
+                            <label for="hammasi1">Все Заказы</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="qaytaIshlash1" name="radio2" value="обработке">
+                            <label for="qaytaIshlash1">В обработке</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="tasdiqlangan1" name="radio2" value="подтвержденные">
+                            <label for="tasdiqlangan1">подтвержденные</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="radetilgan1" name="radio2" value="отмененные">
+                            <label for="radetilgan1">отмененные</label><br>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <label>ИД Клиента</label>
+                      <input type="number" placeholder="номер">
+                    </li>
+                    <li>
+                      <label>Операторы</label>
+                      <input type="text" placeholder="имя">
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><span class="list_value">список.value</span></li>
+              <li>
+                <div class="btn_date">
+                  <ul>
+                    <li>
+                      <input type="date" id="start" name="trip-start" value="2022-07-22" min="2022-01-01" max="2030-12-31">
+                    </li>
+                    <span> -- </span>
+                    <li>
+                      <input type="date" id="start" name="trip-start" value="2022-07-22" min="2022-01-01" max="2030-12-31">
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><button class="btn_filter" type="submit">фильтр</button></li>
+            </ul>
+    
+          </div>
+          <span onclick="resFilter()" class="resp_filter">Filter</span>
+          <div class="icon_messages">
+            <span><a onclick="eslatmaHabarlar()" class="eslatma" href="#"><i class="fa-solid fa-bell"></i></i></a>
+            </span>
+            <span><a href="./message.html"><i class="fa-solid fa-message"></i></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    
+      <!--     sidebar    -->
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPT9mqiidTshsbvsr8SDUYnTLNv3f31RTL0JrQFOZd7ECP8OQ1h0mR_Ze3VlzMPknrUhs&usqp=CAU"
+          alt="profile">
+        <span class="idOperator">ID-10</span>
+        <span class="online">online</span>
+    
+        <div class="respons_head" style="display: none;">
+          <a href="./barchaBuyurtma.html">все заявки</a>
+          <a href="./sortOrders.html">Мои заявки</a>
+          <a href="./buyurtmaOlish.html">Заказы</a>
+        </div>
+    
+    
+        <a href="./profile.html">личный данные </a>
+        <a href="./zayvkiIstory.html">заявки-история </a>
+        <a href="./buyurtmaHistory.html">заказы история </a>
+        <a href="./callHistory.html">звонки историй </a>
+        <a href="./operatorlarPage.html">Оператор</a>
+        <!-- <a href="index.html">Статистика</a> -->
+      </div>
+      <!--     sidebar  ends     -->
+    <main class="content" id="main">
+        <div class="container p-0">
+
+            <h1 class="h3 mb-3">Messages</h1>
+
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-12 col-lg-5 col-xl-3 border-right">
+
+                        <div class="px-4 d-none d-md-block">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <p>
+                                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseExample" aria-expanded="false"
+                                            aria-controls="collapseExample">
+                                            ☰
+                                        </button>
+                                    </p>
+                                    <!-- <div class="collapse" id="collapseExample">
+                                        <div class="card card-body">
+                                          <ul>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                          </ul>
+                                        </div>
+                                      </div> -->
+                                </div>
+                                <div class="flex-grow-1">
+                                    <input type="text" class="form-control my-3" placeholder="Search...">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            <!-- <div class="badge bg-success float-right">5</div> -->
+                            <div class="d-flex align-items-start">
+                                <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                    class="rounded-circle mr-1" alt="Vanessa Tucker" width="40" height="40">
+                                <div class="flex-grow-1 ml-3">
+                                    Vanessa Tucker
+                                    <div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            <!-- <div class="badge bg-success float-right">2</div> -->
+                            <div class="d-flex align-items-start">
+                                <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                    class="rounded-circle mr-1" alt="William Harris" width="40" height="40">
+                                <div class="flex-grow-1 ml-3">
+                                    William Harris
+                                    <div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            <div class="d-flex align-items-start">
+                                <img src="https://uybor.uz/borless/uybor/img/user-images/user_no_photo_512x512.png"
+                                    class="rounded-circle mr-1" alt="Sharon Lessman" width="40" height="40">
+                                <div class="flex-grow-1 ml-3">
+                                    Sharon Lessman
+                                    <div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <hr class="d-block d-lg-none mt-1 mb-0">
+                    </div>
+                    <div class="col-12 col-lg-7 col-xl-9">
+                        <div class="py-2 px-4 border-bottom d-none d-lg-block">
+                            <div class="d-flex align-items-center py-1">
+                                <div class="position-relative">
+                                    <img src="https://uybor.uz/borless/uybor/img/user-images/user_no_photo_512x512.png"
+                                        class="rounded-circle mr-1" alt="Sharon Lessman" width="40" height="40">
+                                </div>
+                                <div class="flex-grow-1 pl-3">
+                                    <strong>Sharon Lessman</strong>
+                                    <div class="text-muted small"><em>Typing...</em></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="position-relative">
+                            <div class="chat-messages p-4">
+
+                            </div>
+
+                            <div class="chat-message-left pb-4">
+                                <div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+                                    <div class="font-weight-bold mb-1">Sharon Lessman</div>
+                                    Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+                                </div>
+                            </div>
+
+                            <div class="chat-message-right mb-4">
+                                <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                    <div class="font-weight-bold mb-1">You</div>
+                                    Cum ea graeci tractatos.
+                                </div>
+                            </div>
+
+                            <div class="chat-message-right mb-4">
+                                <div>
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                        class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40">
+                                    <div class="text-muted small text-nowrap mt-2">2:43 am</div>
+                                </div>
+                                <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                    <div class="font-weight-bold mb-1">You</div>
+                                    Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te vix.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex-grow-0 py-3 px-4 border-top">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Type your message">
+                            <button class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

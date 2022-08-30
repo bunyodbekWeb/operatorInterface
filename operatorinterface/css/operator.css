@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,400;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif ;
+}
+.table{
+    width: 100%;
+}
+.user_malumot{
+    position: absolute;
+    top: 32%;
+    left: 25%;
+    border: 2px solid rgb(163, 162, 162);
+    border-radius: 4px;
+    width: fit-content;
+    padding: 10px 50px;
+    display: none;
+    z-index: 9999;
+    background-color: rgb(189, 186, 186);
+    color: #fff;
+        /* box-shadow: 0px 0px 20px rgb(1 41 112 / 10%); */
+}
+.close_malumot{
+    float: right !important;
+    margin-right: -40px ;
+    margin-top: -13px;
+    cursor: pointer;
+    color: red;
+    z-index: 99999;
+}
+
+.header button {
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    position: absolute;
+    right: 40px;
+    /* bottom: 5px; */
+}
+.onlyn{
+    color: blue;
+}
+.svg {
+    width: 20px;
+    height: 20px;
+}
+.container h1{
+    font-size: 30px;
+    height: 40px;
+    color: rgb(150, 144, 144);
+}
+.modals {
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border-radius: 5px;
+    -webkit-box-shadow: 13px 0px 64px 9px rgba(34, 60, 80, 0.3);
+    -moz-box-shadow: 13px 0px 64px 9px rgba(34, 60, 80, 0.3);
+    box-shadow: 13px 0px 64px 9px rgba(34, 60, 80, 0.3);
+    padding: 15px;
+    display: none;
+}
+.img_admin{
+    width: 45px;
+    height: 35px;
+}
+.modals .image {
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    background-color: blue;
+    color: #fff;
+}
+
+.modals .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 30px;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+.modals button{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 90%;
+}
+.images{
+    height: 200px;
+    width: 100%;
+    display: none;
+}
+
+/*   chat  */
+
+.chat_operator{
+    font-size: 30px;
+    top: 40px !important;
+    color: rgb(73, 81, 226);
+    position: static;
+}
+
+@media(max-width: 780px){
+    .main{
+        overflow-x: scroll !important;
+    }
+    #add_new{
+        width: 130px !important; 
+        height: 40px !important;
+    }
+    #modal{
+        width: 80%;
+    }
+}

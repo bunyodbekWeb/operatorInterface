@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+.main{
+    margin: 5px;
+}
+.sarlavha{
+    font-size: 25px;
+    color: rgb(180, 172, 172);
+}
+.boshSahifa a{
+    border: 2px solid aliceblue;
+    background-color: rgb(92, 64, 228) ;
+    color: #fff;
+    padding: 3px 4px;
+    float: right;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.boshSahifa a:hover{
+    font-size: 17px;
+    transition: .4s ease;
+    color: #fff;
+}
+.user_info{
+    display: block !important;
+    height: 100vh !important;
+    margin: 0 auto !important;
+    text-align: center;
+    box-shadow: 0px 0 30px rgb(1 41 112 / 10%);
+}
+.user_info img{
+    width: 10vw;
+    height: 24vh;
+    border-radius: 50%;
+    object-fit: cover;
+    text-align: center !important;
+}
+.user_pages{
+    display: block !important;
+}
+.user_pages ul{
+    margin-top: 30px;
+
+}
+.user_pages ul li{
+    border-bottom: 1px solid rgb(220, 217, 217);
+    /* margin-left: -40px; */
+}
+.user_pages ul li:hover{
+    background-color: #0073ff;
+    color: #fff !important;
+}
+.user_pages ul li a:hover{
+    color: #fff !important;
+}
+.user_pages ul li a{
+    text-decoration: none;
+    margin-left: -30px !important;
+    font-size: 25px;
+    margin: 10px 0;
+    color: rgb(112, 111, 111);
+    margin: 5px;
+}
+.user_pages ul li a:hover{
+    color: rgb(127, 44, 211);
+    transition: .3s all;
+
+}
+
+.logist_yuborish{
+    display: flex;
+    margin: 20px;
+}
+.logist_list span{
+    border: 2px solid rgb(180, 177, 177);
+    cursor: pointer;
+}
+.logist_list  i{
+    margin: 0 10px;
+}
+.list{
+    background-color: aliceblue;
+}
+.logist_yuborish button{
+    margin: 0 20px !important;
+    border: 2px solid rgb(180, 177, 177);
+
+}

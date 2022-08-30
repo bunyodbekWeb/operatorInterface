@@ -1,0 +1,20 @@
+
+.search_dete_div ul{
+    display: flex !important;
+    float: right;
+    margin-right: 50px;
+}
+.search_dete_div ul li{
+    list-style-type: none;
+    margin: 0 5px;
+}
+.search_dete_div ul li input{
+    padding: 3px;
+    border: 1px solid #bebfc1;
+}
+.search_dete_div ul li button{
+    padding: 4px 15px;
+    color: #fff;
+    border: none;
+    background-color: #0073ff;
+}

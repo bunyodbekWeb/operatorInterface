@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/operator.css">
+
+    <script src="./js/operator.js" defer></script>
+    <script src="./js/index.js" defer></script>
+
+    <!--  bootstrap   -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+            <!-- Font aweson  css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="header_bar">
+    
+        <div class="menu-bar">
+          <button class="logo" onclick="openNav()">☰</button>
+          <div class="unv_filter">
+            <ul>
+              <li class="sort_btn">
+                <div class="sort_div">
+                  <span class="sort_список">список <i class="fas fa-caret-down"></i></span>
+                </div>
+    
+                <div class="dropdown-menu">
+                  <ul>
+                    <!-- <li><a href="#">Все заявки</a>
+                    </li>
+                    <li><a href="#">Мои заявки</a>
+                    </li>
+                    <li><a href="#">Заказы</a>
+                    </li> -->
+    
+                    <li>
+                      <!-- <a href="#"></a> -->
+                      <span>Заявки <i class="fas fa-caret-right"></i></span>
+                      <div class="dropdown-menu-1">
+                        <ul>
+                          <li>
+                            <input type="radio" id="hammasi" name="radio" value="Все">
+                            <label for="hammasi">Все заявки</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="hammasi" name="radio" value="Все">
+                            <label for="hammasi">Мои заявки</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="qaytaIshlash" name="radio" value="обработке">
+                            <label for="qaytaIshlash">В обработке</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="tasdiqlangan" name="radio" value="подтвержденные">
+                            <label for="tasdiqlangan">подтвержденные</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="radetilgan" name="radio" value="отмененные">
+                            <label for="radetilgan">отмененные</label><br>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <span>Заказы <i class="fas fa-caret-right"></i></span>
+                      <div class="dropdown-menu-1">
+                        <ul>
+                          <li>
+                            <input type="radio" id="hammasi1" name="radio2" value="Все">
+                            <label for="hammasi1">Все Заказы</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="qaytaIshlash1" name="radio2" value="обработке">
+                            <label for="qaytaIshlash1">В обработке</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="tasdiqlangan1" name="radio2" value="подтвержденные">
+                            <label for="tasdiqlangan1">подтвержденные</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="radetilgan1" name="radio2" value="отмененные">
+                            <label for="radetilgan1">отмененные</label><br>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <label>ИД Клиента</label>
+                      <input type="number" placeholder="номер">
+                    </li>
+                    <li>
+                      <label>Операторы</label>
+                      <input type="text" placeholder="имя">
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><span class="list_value">список.value</span></li>
+              <li>
+                <div class="btn_date">
+                  <ul>
+                    <li>
+                      <input type="date" id="start" name="trip-start" value="2022-07-22" min="2022-01-01" max="2030-12-31">
+                    </li>
+                    <span> -- </span>
+                    <li>
+                      <input type="date" id="start" name="trip-start" value="2022-07-22" min="2022-01-01" max="2030-12-31">
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><button class="btn_filter" type="submit">фильтр</button></li>
+            </ul>
+    
+          </div>
+          <span onclick="resFilter()" class="resp_filter">Filter</span>
+          <div class="icon_messages">
+            <span><a onclick="eslatmaHabarlar()" class="eslatma" href="#"><i class="fa-solid fa-bell"></i></i></a>
+            </span>
+            <span><a href="./message.html"><i class="fa-solid fa-message"></i></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    
+      <!--     sidebar    -->
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPT9mqiidTshsbvsr8SDUYnTLNv3f31RTL0JrQFOZd7ECP8OQ1h0mR_Ze3VlzMPknrUhs&usqp=CAU"
+          alt="profile">
+        <span class="idOperator">ID-10</span>
+        <span class="online">online</span>
+    
+        <div class="respons_head" style="display: none;">
+          <a href="./barchaBuyurtma.html">все заявки</a>
+          <a href="./sortOrders.html">Мои заявки</a>
+          <a href="./buyurtmaOlish.html">Заказы</a>
+        </div>
+    
+    
+        <a href="./profile.html">личный данные </a>
+        <a href="./zayvkiIstory.html">заявки-история </a>
+        <a href="./buyurtmaHistory.html">заказы история </a>
+        <a href="./callHistory.html">звонки историй </a>
+        <a href="./operatorlarPage.html">Оператор</a>
+        <!-- <a href="index.html">Статистика</a> -->
+      </div>
+      <!--     sidebar  ends     -->
+
+    <div id="main" onload="loaded()">
+
+        <div class="container">
+            <div class="header d-flex justify-space-between">
+                <h1>Admin</h1>
+                <button class="btn btn-info" id="add_new" onclick="addNew()">+ Add New</button>
+            </div>
+            <div class="main">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Admin</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+                <div class="user_malumot"></div>
+            </div>
+            <div class="modals" id="modal">
+                <p class="close" onclick="closes()">
+                    x
+                </p>
+                <form onsubmit="return false" class="row mt-5">
+                    <div class="col-lg-12">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" placeholder="name" id="name">
+                    </div>
+                    <div class="col-lg-12">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" placeholder="Email" id="email">
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <label class="image" for="image">
+                            Uplaod image
+                        </label>
+                        <input type="file" onchange="uploadImage(event)" class="form-control d-none" placeholder="Email"
+                            id="image">
+                    </div>
+                    <img src="" class="mt-5 images" id="images" alt="">
+                    <button onclick="saveUser()" class="btn btn-success" id="save">Save</button>
+                    <button style="display: none;" onclick="Edit()" class="btn btn-success " id="edit">Edit</button>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
